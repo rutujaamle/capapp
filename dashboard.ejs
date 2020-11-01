@@ -1,0 +1,144 @@
+<br>
+<div class="Header" style="text-align: right; ">
+<h1 style="color: rgb(151, 32, 32);">NIIT University</h1>
+<h2 style=" color: rgb(151, 32, 32);">Neemrana</h2>
+</div>
+
+
+<h1 class="mt-4" style="text-align: center;font-weight: bold;color: brown; font-size: 100px;">NU Infirmary</h1><br><br>
+<p class="lead mb-3" style="font-size: 50px;text-align: center;text-decoration: underline;font-weight: bold;">
+  Welcome Dr.  <%= name %>
+</p>
+<br>
+<form action="/users/getsingle" method="post">
+  <button type="submit" style="float: right;" class="btn btn-default">Search</button>
+  <input type="text" class="form-control" id="pName" name="pName" placeholder="Search Student by Name" style="width: 40%;float:right">
+</form>
+<br>
+<script>
+var d = Date(Date.now()); 
+b=d.ge
+a=d.toString()
+res = a.slice(0,24);
+year=a.slice(11,15)
+date=a.slice(8,11)
+month= a.slice(4,8)
+// document.write(res)
+
+// document.write(date)
+// document.write(month)
+document.write("Date: "+date+" "+month+" "+year)
+</script>
+<br><br>
+<form action="/dashboard" method="POST">
+
+<div class="form-row">
+
+
+  <div class="form-item" style="width: 45%; float:left; ">
+    <label for="rollno">Enrollment Number:</label>
+    <input
+      required
+      type="text"
+      id="rollno"
+      name="rollno"
+      class="form-control"
+      placeholder="Enter Enrollment Number"
+      
+    />
+  </div>
+
+  <div class="form-item" style="width: 50%; float:left; margin-left: 5%; ">
+    <label for="name">Patient's Name:</label>
+    <input required
+      type="text"
+      id="name"
+      name="name"
+      class="form-control"
+      placeholder="Enter Patient's Name"
+      
+    />
+  </div>
+
+</div>
+
+  
+
+<br>
+ <div class="form-row">
+  <div class="form-item" style="width: 45%; float:left;  ">
+    <label for="age" >Age:</label>
+    <input required
+      type="number"
+      id="age"
+      name="age"
+      class="form-control"
+      placeholder="Enter Age"
+      
+      
+    />
+  </div>
+
+  <br>
+  <br>
+  <div class="form-item" style=" float:left; margin-left: 5%; ">
+    <label for="gender">Gender: </label>
+    <br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label>
+  </div>
+
+ </div>
+
+ <br>
+ 
+  <div class="form-row"></div>
+  <div class="form-item">
+    <label for="symptoms">Symptoms: </label><br>
+    <textarea name="symptoms" id= "symptoms" rows="5" style="width: 100%;" required></textarea>
+  </div>
+  
+
+  <br>
+  <div class="form-item">
+    <label for="psr">Prescription: </label><br>
+    <textarea  required name="psr" id ="psr" rows="10" style="width: 100%;"></textarea>
+    
+  </div>
+
+<!-- <button type="submit" id="ss" class="btn btn-primary btn-block" >
+  Submit and Save
+</button> -->
+
+
+<br>
+
+<div class="form-row">
+
+  <div class="form-item" style="width: 48%; ">
+    <button type="print"  formaction="/precp"  class="btn btn-primary btn-block" >
+      Print and Save 
+    </button>
+  </div>
+
+  <div class="form-item" style="width: 48%; float:right; margin-left: 4%;">
+    <button type="emergency" formaction="/emergency" class="btn btn-primary btn-block"  >
+      Emergency
+    </button>
+  </div>
+
+</div>
+
+
+</form>
+<br>
+<br>
+
+<footer style="text-align:center ;">
+  <a href="/users/logout" class="btn btn-secondary" >Logout</a>
+  
+</footer>

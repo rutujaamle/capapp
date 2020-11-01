@@ -1,0 +1,52 @@
+<html lang="en">
+
+<body>
+  
+
+
+    <div id="demo">
+      <br>
+      <h1 style="float: inherit;">Search Result</h1>
+      <br>
+      
+      
+      
+      <div class="table-responsive-vertical shadow-z-1">
+      
+      <table id="table" class="table table-hover table-mc-light-blue">
+          <thead>
+            <tr>
+              <th>Roll no.</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Symptoms</th>
+              <th>Prescription</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if (data.length > 0) { %>
+              <% data.forEach(data => { %> 
+            <tr>
+              <td data-title="Roll no."><%=data.rollno  %></td>
+              <td data-title="Name"><%= data.name%></td>
+              <td data-title="Age"> <%=data.age %></td>
+              <td data-title="Symptoms"><%=data.symptoms  %></td>
+              <td data-title="Prescription"><%=data.psr %></td>
+
+            </tr>
+            <% }) %> 
+            <% } else { %>
+              <br>
+              <p>There is no data to display...</p>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+      
+      
+      
+    </div>
+
+  
+</body>
+</html>
